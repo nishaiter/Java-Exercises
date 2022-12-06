@@ -1,0 +1,195 @@
+Java:
+1 . import java.io.*;
+import java.util.*;
+public class A1Q1 {
+public static void main(String[] args) {
+		Scanner sc=new Scanner (System.in);
+		int c=0;
+		System.out.println("enter length");
+		int l=sc.nextInt();
+		String a[]=new String [l];
+		for(int i=0;i<l;i++)
+		{
+			System.out.println("enter a string");
+			a[i]=sc.next();
+		}
+		for(int i=0;i<l-1;i++)
+		{
+			c=0;
+			for(int j=0;j<l;j++)
+			{
+				if(a[i].equals(a[j]))
+{
+					c=c+1;
+				}
+			}
+			if(c==1)
+			{
+				System.out.print(a[i]+", ");
+			}
+		}
+	}
+}
+
+
+2 . public class shop extends Market {
+
+	@Override
+	void getPrice() {
+		// TODO Auto-generated method stub
+		System.out.println("price is 100 rupees");
+	}
+@Override
+	void getProductName() {
+		// TODO Auto-generated method stub
+		System.out.println("Product is deo");
+		
+	}
+	
+	Market obj=new shop();
+	obj.getPrice();
+	obj.getProductName();
+}
+
+3 . public class secondLargest {
+    static void printsecondLargest(int arr[],int size){
+        int i,first,second;
+        if (size < 2) {
+            System.out.print(" Invalid Input ");
+            return;
+        }
+
+        first = second = Integer.MIN_VALUE;
+        for (i = 0; i < size; i++) {
+
+            if (arr[i] > first) {
+                second = first;
+                first = arr[i];
+            }
+else if (arr[i] > second && arr[i] != first)
+                second = arr[i];
+}
+        System.out.print("The second largest element"
+                + " is " + second);
+    }
+
+    public static void main(String[] args) {
+        int arr[] = { 1, 25, 12, 30, 14, 2 };
+        int n = arr.length;
+        printsecondLargest(arr,n);
+    }
+}
+
+
+
+SQL :
+	1 .
+create table Subject(id varchar(10), rollno numeric(5) primary key, subjectname varchar(20), marks numeric(10));
+--select * from Subject
+--insert into Subject values('AB101' , 101, 'Maths', 100);
+--insert into Subject values('AB102' , 102, 'Geography', 85);
+--insert into Subject values('AB103' , 103, 'English', 80);
+--insert into Subject values('AB104' , 104, 'Science', 90);
+--insert into Subject values('AB105' , 105, 'History', 95);
+--select subjectname, count(distinct rollno) from Subject 
+
+
+2…)
+--create table Student(id varchar(10), rollno numeric(5)FOREIGN 
+--KEY(rollno) REFERENCES Subject(rollno), sname varchar(20), address varchar(40));
+--select * from Student
+
+--insert into Student values('AB101' , 101, 'Jack', 'Pune');
+--insert into Student values('AB102' , 102, 'Suraj', 'Noida');
+--insert into Student values('AB103' , 103, 'Rahul', 'Pune');
+--insert into Student values('AB104' , 104, 'Sid', 'Mumbai');
+--insert into Student values('AB105' , 105, 'Ankit', 'Noida');
+
+
+HTML :
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-xxl-1 header-1">
+            <p>LOGO..</p>
+        </div>
+        <div class="col-xxl-7 header-2">
+            <p> COMPONY NAME</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xxl-1">
+            <li>Signup</li>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Help</li>
+        </div>
+        <div class="col-xxl-5 content-1">
+            <p>CONTENT</p>
+            <table>
+                <tr>
+                <th>product_id</th>
+                <th>product_name</th>
+                <th>price</th>
+                <th>location</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>jeans</td>
+                    <td>400</td>
+                    <td>delhi</td>
+                  </tr>
+            </table>
+        </div>
+        <div class="col-xxl-6 content-2">
+            
+        </div>
+    </div>
+    <footer>
+        <div class="row ">
+            <div class="col-xxl-7 footer-1">
+                <p>FOOTER</p>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
+
+Css :
+.row .header-1 {
+    background: red;
+    color: black;
+}
+.header-2{
+    padding-left: 20%;
+    background: green;
+}
+.content-1{
+    background: skyblue;
+    padding-bottom: 30%;
+}
+.content-2{
+    background: lightsalmon;
+    padding-bottom: 200px;
+}
+.footer-1{
+    background: green;
+}
+table{
+   
+    border: 2px solid;
+}
+td, th {
+    border: 1px solid #dddddd;}
+
